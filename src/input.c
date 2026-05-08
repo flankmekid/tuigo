@@ -12,6 +12,10 @@ Action inputGetAction(void) {
     case 'p': case 'P': return ACTION_PASS;
     case 'u': case 'U': return ACTION_UNDO;
     case 'q': case 'Q': return ACTION_QUIT;
+    case KEY_RESIZE:
+      resizeterm(LINES, COLS);
+      clearok(stdscr, TRUE);
+      return ACTION_NONE;
     default: return ACTION_NONE;
   }
 }

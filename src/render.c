@@ -70,7 +70,7 @@ void renderBoard(const GameState *gs) {
   int cellW = scale * 2;  /* chars between intersections (horiz step) */
   int cellH = scale;      /* rows between intersections (vert step)   */
 
-  clear();
+  erase();
 
   /* column labels (top) */
   attron(COLOR_PAIR(CP_SIDEBAR));
